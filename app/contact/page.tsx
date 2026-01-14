@@ -8,7 +8,7 @@ export default function ContactPage() {
             <Navbar />
 
             {/* Hero / Header Section */}
-            <section className="relative pt-48 pb-12 px-6 lg:px-8">
+            <section className="relative pt-32 md:pt-48 pb-12 px-6 lg:px-8">
                 <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none"></div>
                 {/* Spotlight Effect */}
                 <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none"></div>

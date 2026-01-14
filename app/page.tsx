@@ -6,12 +6,14 @@ import TestimonialsSection from "./components/TestimonialsSection";
 
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
+import LogoLoop from "./components/LogoLoop";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen">
       <Navbar />
       <HeroSection />
+      <LogoLoop />
       <FeaturesSection />
       <WorkflowShowcase />
       <TestimonialsSection />

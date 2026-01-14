@@ -1,11 +1,23 @@
 "use client";
 import Link from "next/link";
+import { useState, useRef } from "react";
+import { Volume2, VolumeX, Play, ArrowRight } from "lucide-react";
 
 import { GridScan } from "./GridScan";
 
 export default function HeroSection() {
+    const [isMuted, setIsMuted] = useState(true);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const toggleMute = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !videoRef.current.muted;
+            setIsMuted(!isMuted);
+        }
+    };
+
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-20">
             {/* Grid Scan Background */}
             <div className="absolute inset-0 z-0">
                 <GridScan
@@ -58,50 +70,29 @@ export default function HeroSection() {
                         </h1>
 
                         {/* Subheading */}
-                        <p className="text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                        <p className="text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light tracking-wide">
                             Create powerful automation workflows with drag-and-drop simplicity.
-                            No code required, infinite possibilities.
+                            <br className="hidden md:block" />
+                            <span className="text-white font-medium">No code required</span>, infinite possibilities.
                         </p>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-                            <Link href="/contact" className="btn-primary group px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 glow-orange-strong shadow-2xl min-w-[200px] flex items-center justify-center">
-                                Start Building
-                                <svg
-                                    className="inline-block ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                                    />
-                                </svg>
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mb-12">
+                            <Link href="/contact" className="btn-primary group relative px-8 py-4 bg-orange-600 text-white text-lg font-bold rounded-xl hover:bg-orange-500 transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(249,115,22,0.6)] hover:shadow-[0_0_40px_rgba(249,115,22,0.8)] min-w-[200px] flex items-center justify-center overflow-hidden border border-orange-400/50">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Start Building
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-white" />
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </Link>
-                            <Link href="/ai-agents" className="group px-8 py-4 glass-effect text-white text-lg font-semibold rounded-xl border border-orange-500/30 hover:border-orange-500 transform hover:scale-105 transition-all duration-300 min-w-[200px] flex items-center justify-center">
+
+                            <Link href="/ai-agents" className="group px-8 py-4 glass-effect text-white text-lg font-semibold rounded-xl border border-white/10 hover:border-orange-500/50 hover:bg-orange-500/10 transform hover:scale-105 transition-all duration-300 min-w-[200px] flex items-center justify-center gap-3 backdrop-blur-xl">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                </span>
                                 Watch Demo
-                                <svg
-                                    className="inline-block ml-2 w-5 h-5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                                    />
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
+                                <Play className="w-4 h-4 fill-current" />
                             </Link>
                         </div>
 
@@ -125,18 +116,31 @@ export default function HeroSection() {
                             <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
                             {/* Video Frame */}
-                            <div className="relative rounded-2xl overflow-hidden glass-effect border border-white/10 shadow-2xl transform transition-all duration-500 hover:scale-[1.01]">
+                            <div className="relative rounded-2xl overflow-hidden glass-effect border border-white/10 shadow-2xl transform transition-all duration-500 hover:shadow-orange-500/20 group-hover:border-orange-500/30">
                                 <video
+                                    ref={videoRef}
                                     src="/home video/demo.mp4"
                                     autoPlay
                                     loop
-                                    muted
+                                    muted={isMuted}
                                     playsInline
                                     className="w-full h-auto object-cover"
                                 />
 
-                                {/* Overlay Tint for Integration */}
-                                <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
+                                {/* Overlay Tint */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
+                                {/* Audio Control */}
+                                <button
+                                    onClick={toggleMute}
+                                    className="absolute bottom-4 right-4 p-3 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white hover:bg-orange-500 hover:text-white transition-all duration-300 z-20 group/audio"
+                                >
+                                    {isMuted ? (
+                                        <VolumeX className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
+                                    ) : (
+                                        <Volume2 className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
+                                    )}
+                                </button>
                             </div>
 
                             {/* Floating UI Elements (Optional Decor) */}

@@ -1,126 +1,159 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/people/Logic-Builder-AI/61580976901754/" },
+    { icon: Instagram, href: "https://www.instagram.com/logicbuilder.ai" },
+    { icon: Youtube, href: "https://www.youtube.com/@LogicBuilder-ai" }
+];
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.5 }
+    }
+};
 
 export default function Footer() {
-    return (
-        <footer className="relative py-20 border-t border-orange-500/20 overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 grid-pattern opacity-10"></div>
+    const text = "LOGIC BUILDER";
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                    {/* Brand Column */}
-                    <div className="lg:col-span-1">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-lg">
-                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+    return (
+        <footer className="relative bg-black border-t border-white/10 pt-24 pb-0 overflow-hidden">
+            {/* Ambient Background Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-30 pointer-events-none">
+                <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[-10%] right-[20%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+            </div>
+
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-20"
+            >
+                <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-24 mb-16">
+                    {/* Brand Section */}
+                    <motion.div variants={itemVariants} className="flex-1 max-w-sm">
+                        <Link href="/" className="flex items-center gap-3 mb-6 group">
+                            <div className="relative w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 shadow-lg group-hover:border-orange-500/50 group-hover:shadow-orange-500/20 transition-all duration-300">
+                                <Image
+                                    src="/images/logo-footer.png"
+                                    alt="Logic Builder Logo"
+                                    width={32}
+                                    height={32}
+                                    className="object-contain w-8 h-8"
+                                />
                             </div>
-                            <span className="text-xl font-bold gradient-text">Logic Builder</span>
-                        </div>
-                        <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Empowering teams to build intelligent automation workflows without writing a single line of code.
+                            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-orange-500 transition-colors">Logic Builder</span>
+                        </Link>
+                        <p className="text-gray-400 leading-relaxed mb-8">
+                            Empowering creators to build intelligent automation workflows.
+                            <br />
+                            <span className="text-white font-medium">No code required. Pure logic.</span>
                         </p>
-                        {/* Social Links */}
+
                         <div className="flex gap-4">
-                            {["twitter", "github", "linkedin", "youtube"].map((social) => (
+                            {socialLinks.map((Social, index) => (
                                 <a
-                                    key={social}
-                                    href="#"
-                                    className="w-10 h-10 glass-effect rounded-lg border border-orange-500/20 hover:border-orange-500 flex items-center justify-center text-gray-400 hover:text-orange-400 transition-all duration-300 transform hover:scale-110"
+                                    key={index}
+                                    href={Social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-orange-500 hover:border-orange-500 text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1"
                                 >
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" />
-                                    </svg>
+                                    <Social.icon className="w-5 h-5" />
                                 </a>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    {/* Product Column */}
-                    <div>
-                        <h3 className="text-white font-semibold text-lg mb-4">Product</h3>
-                        <ul className="space-y-3">
-                            {["Features", "Pricing", "Templates", "Integrations", "API Docs"].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Company Column */}
-                    <div>
-                        <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
-                        <ul className="space-y-3">
-                            {["About Us", "Careers", "Blog", "Press Kit", "Contact"].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Resources Column */}
-                    <div>
-                        <h3 className="text-white font-semibold text-lg mb-4">Resources</h3>
-                        <ul className="space-y-3">
-                            {["Documentation", "Tutorials", "Community", "Support", "Status"].map((item) => (
-                                <li key={item}>
-                                    <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Newsletter */}
-                <div className="glass-effect p-8 rounded-2xl border border-orange-500/20 mb-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    {/* Navigation */}
+                    <motion.div variants={itemVariants} className="flex flex-wrap gap-12 md:gap-24">
                         <div>
-                            <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-                            <p className="text-gray-400 text-sm">
-                                Get the latest features, tutorials, and automation tips delivered to your inbox.
-                            </p>
+                            <h4 className="text-white font-semibold text-lg mb-6">Company</h4>
+                            <ul className="space-y-4">
+                                {['About', 'Contact', 'AI Agents'].map((item) => (
+                                    <li key={item}>
+                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                            {item}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                        <div className="flex gap-3">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 px-4 py-3 bg-black/50 border border-orange-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors duration-300"
-                            />
-                            <button className="btn-primary px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300">
-                                Subscribe
-                            </button>
+                        <div>
+                            <h4 className="text-white font-semibold text-lg mb-6">Legal</h4>
+                            <ul className="space-y-4">
+                                {['Privacy Policy', 'Terms of Service'].map((item) => (
+                                    <li key={item}>
+                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                            {item}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-orange-500/20 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-                    <p className="text-gray-400 text-sm">
-                        © 2026 Logic Builder. All rights reserved.
-                    </p>
+                {/* Bottom Bar Details */}
+                <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-white/5 pt-8">
+                    <p>© {new Date().getFullYear()} Logic Builder. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                            Privacy Policy
-                        </Link>
-                        <Link href="/terms" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                            Terms of Service
-                        </Link>
-                        {/* <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm">
-                            Cookie Policy
-                        </a> */}
+                        <span>Made with logic.</span>
                     </div>
-                </div>
+                </motion.div>
+            </motion.div>
+
+            {/* Giant Typography Reveal */}
+            <div className="w-full overflow-hidden flex justify-center items-end opacity-20 pointer-events-none select-none bg-gradient-to-t from-black via-transparent to-transparent absolute bottom-0 left-0 right-0">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="flex translate-y-[20%]"
+                >
+                    {text.split("").map((char, i) => (
+                        <motion.span
+                            key={i}
+                            variants={{
+                                hidden: { y: "100%", opacity: 0 },
+                                visible: { y: 0, opacity: 1 }
+                            }}
+                            transition={{
+                                duration: 1,
+                                delay: i * 0.05,
+                                ease: [0.22, 1, 0.36, 1]
+                            }}
+                            className="text-[15vw] md:text-[18vw] leading-[0.8] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/0"
+                            style={{
+                                WebkitTextStroke: '1px rgba(255,255,255,0.1)'
+                            }}
+                        >
+                            {char === " " ? "\u00A0" : char}
+                        </motion.span>
+                    ))}
+                </motion.div>
             </div>
+            {/* Spacer for the text to sit in */}
+            <div className="h-[15vw] md:h-[18vw] pointer-events-none" aria-hidden="true" />
         </footer>
     );
 }

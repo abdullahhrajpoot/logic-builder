@@ -12,7 +12,7 @@ export default function CTASection() {
             <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="glass-effect p-12 md:p-16 rounded-3xl border border-orange-500/30 glow-orange text-center overflow-hidden relative">
+                <div className="glass-effect p-8 md:p-16 rounded-3xl border border-orange-500/30 glow-orange text-center overflow-hidden relative">
                     {/* Animated gradient background */}
                     <div className="absolute inset-0 animated-gradient opacity-10"></div>
 

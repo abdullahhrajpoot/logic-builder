@@ -8,7 +8,7 @@ export default function AiAgentsPage() {
         <div className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
             <Navbar />
 
-            <main className="pt-48 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
+            <main className="pt-32 md:pt-48 pb-20 px-6 lg:px-8 max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16 fade-in">
                     <div className="inline-block mb-4">

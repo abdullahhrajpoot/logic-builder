@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     return (
         <main className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
             <Navbar />
-            <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-48 pb-32 space-y-12">
+            <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 md:pt-48 pb-32 space-y-12">
 
                 {/* Header */}
                 <header className="border-b border-white/10 pb-10">

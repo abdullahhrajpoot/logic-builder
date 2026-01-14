@@ -14,26 +14,50 @@
 /* Custom Utilities */
 @layer utilities {
   .glass-effect {
-    @apply bg-black/40 backdrop-blur-md border border-white/10;
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+  }
+
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent bg-[300%_auto];
+    animation: gradient 8s ease infinite;
   }
 
   .glow-orange {
-    box-shadow: 0 0 20px -5px rgba(255, 107, 26, 0.5);
+    box-shadow: 0 0 20px -5px rgba(255, 107, 26, 0.4);
   }
 
   .glow-orange-strong {
-    box-shadow: 0 0 30px -5px rgba(255, 107, 26, 0.7);
+    box-shadow: 0 0 35px -5px rgba(255, 107, 26, 0.6);
   }
 
   .grid-pattern {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
 }
 
 /* Base Styles */
@@ -111,6 +135,20 @@ body {
 .animated-gradient {
   background-size: 200% 200%;
   animation: gradient-xy 6s ease infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }
 
 @theme inline {
@@ -227,6 +265,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

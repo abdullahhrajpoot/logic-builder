@@ -8,7 +8,7 @@ export default function AboutPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-48 pb-20 px-6 lg:px-8">
+            <section className="relative pt-32 md:pt-48 pb-20 px-6 lg:px-8">
                 <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none"></div>
                 {/* Spotlight Effect */}
                 <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-500/10 blur-[100px] rounded-full pointer-events-none"></div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
             <section className="py-20 px-6 lg:px-8 mb-20 fade-in" style={{ animationDelay: "0.6s" }}>
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
                     {/* Left Frame: Orange Gradient */}
-                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-12 lg:p-20 flex flex-col justify-center relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-6 md:p-12 lg:p-20 flex flex-col justify-center relative overflow-hidden">
                         <div className="absolute inset-0 grid-pattern opacity-30 mix-blend-overlay"></div>
                         <div className="relative z-10">
                             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
