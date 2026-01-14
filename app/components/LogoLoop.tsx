@@ -4,40 +4,32 @@ import Image from 'next/image';
 
 const logos = [
     {
-        name: 'Perplexity',
-        url: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg'
+        name: 'Partner 1',
+        url: '/icons/partner-1.png'
     },
     {
-        name: 'Lovable',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://lovable.dev'
+        name: 'Partner 2',
+        url: '/icons/partner-2.png'
     },
     {
-        name: 'GoHighLevel',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://gohighlevel.com'
+        name: 'Partner 3',
+        url: '/icons/partner-3.png'
     },
     {
-        name: 'Eleven Labs',
-        url: 'https://upload.wikimedia.org/wikipedia/commons/8/88/ElevenLabs_logo_2023.svg'
+        name: 'Partner 4',
+        url: '/icons/partner-4.jfif'
     },
     {
-        name: 'HeyGen',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://heygen.com'
+        name: 'Partner 5',
+        url: '/icons/partner-5.jfif'
     },
     {
-        name: 'SubMagic',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://submagic.co'
-    },
-    {
-        name: 'GenSpark',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://genspark.ai'
-    },
-    {
-        name: 'ManyChat',
-        url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Manychat-logo-blue.svg'
+        name: 'Partner 6',
+        url: '/icons/partner-6.png'
     },
     {
         name: 'Instantly',
-        url: 'https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&flavor=SQUARE&size=256&x=0&y=0&u=https://instantly.ai'
+        url: '/icons/instantly.png'
     },
 ];
 
