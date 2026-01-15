@@ -6,7 +6,7 @@ export default function WorkflowShowcase() {
         <section className="relative py-32 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0">
-                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl spotlight"></div>
+                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl spotlight"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -14,7 +14,7 @@ export default function WorkflowShowcase() {
                     {/* Left Content */}
                     <div>
                         <div className="inline-block mb-6">
-                            <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-orange-400 border border-orange-500/30">
+                            <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-blue-400 border border-blue-500/30">
                                 Workflow Builder
                             </span>
                         </div>
@@ -23,7 +23,7 @@ export default function WorkflowShowcase() {
                             <br />
                             <span className="gradient-text">With Simple Clicks</span>
                         </h2>
-                        <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                        <p className="text-xl text-slate-400 mb-8 leading-relaxed">
                             Our visual workflow builder transforms complex automation into an
                             intuitive, drag-and-drop experience. Build, test, and deploy in minutes.
                         </p>
@@ -38,18 +38,18 @@ export default function WorkflowShowcase() {
                             ].map((item, index) => (
                                 <div key={index} className="flex items-start gap-3 fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                                     <div className="flex-shrink-0 mt-1">
-                                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-slate-600 flex items-center justify-center">
                                             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="text-gray-300">{item}</p>
+                                    <p className="text-slate-300">{item}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <Link href="/contact" className="btn-primary px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 glow-orange inline-block text-center">
+                        <Link href="/contact" className="btn-primary px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 glow-slate inline-block text-center border border-slate-500/30">
                             Try It Now
                         </Link>
                     </div>
@@ -57,7 +57,7 @@ export default function WorkflowShowcase() {
                     {/* Right Visual */}
                     <div className="relative">
                         {/* Main Card */}
-                        <div className="glass-effect p-8 rounded-3xl border border-orange-500/30 glow-orange transform hover:scale-105 transition-all duration-500">
+                        <div className="glass-effect p-8 rounded-3xl border border-slate-700/30 glow-slate transform hover:scale-105 transition-all duration-500">
                             {/* Workflow Nodes */}
                             <div className="space-y-6">
                                 {/* Start Node */}
@@ -68,14 +68,14 @@ export default function WorkflowShowcase() {
                                     <div className="flex-1">
                                         <div className="glass-effect px-4 py-3 rounded-lg border border-green-500/30">
                                             <p className="text-sm font-semibold text-white">Start Trigger</p>
-                                            <p className="text-xs text-gray-400 mt-1">When form is submitted</p>
+                                            <p className="text-xs text-slate-400 mt-1">When form is submitted</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Connector */}
                                 <div className="pl-6">
-                                    <div className="w-0.5 h-8 bg-gradient-to-b from-orange-500 to-orange-600"></div>
+                                    <div className="w-0.5 h-8 bg-gradient-to-b from-blue-500 to-slate-600"></div>
                                 </div>
 
                                 {/* Process Node */}
@@ -86,14 +86,14 @@ export default function WorkflowShowcase() {
                                     <div className="flex-1">
                                         <div className="glass-effect px-4 py-3 rounded-lg border border-blue-500/30">
                                             <p className="text-sm font-semibold text-white">Process Data</p>
-                                            <p className="text-xs text-gray-400 mt-1">Validate and transform</p>
+                                            <p className="text-xs text-slate-400 mt-1">Validate and transform</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Connector */}
                                 <div className="pl-6">
-                                    <div className="w-0.5 h-8 bg-gradient-to-b from-orange-500 to-orange-600"></div>
+                                    <div className="w-0.5 h-8 bg-gradient-to-b from-blue-500 to-slate-600"></div>
                                 </div>
 
                                 {/* Decision Node */}
@@ -104,55 +104,55 @@ export default function WorkflowShowcase() {
                                     <div className="flex-1">
                                         <div className="glass-effect px-4 py-3 rounded-lg border border-purple-500/30">
                                             <p className="text-sm font-semibold text-white">Decision Point</p>
-                                            <p className="text-xs text-gray-400 mt-1">If condition is true</p>
+                                            <p className="text-xs text-slate-400 mt-1">If condition is true</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Connector */}
                                 <div className="pl-6">
-                                    <div className="w-0.5 h-8 bg-gradient-to-b from-orange-500 to-orange-600"></div>
+                                    <div className="w-0.5 h-8 bg-gradient-to-b from-slate-500 to-slate-600"></div>
                                 </div>
 
                                 {/* Action Node */}
                                 <div className="flex items-center gap-4 fade-in" style={{ animationDelay: "0.6s" }}>
-                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold glow-orange">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-500 to-slate-600 flex items-center justify-center text-white font-bold glow-slate">
                                         A
                                     </div>
                                     <div className="flex-1">
-                                        <div className="glass-effect px-4 py-3 rounded-lg border border-orange-500/30">
+                                        <div className="glass-effect px-4 py-3 rounded-lg border border-slate-500/30">
                                             <p className="text-sm font-semibold text-white">Execute Action</p>
-                                            <p className="text-xs text-gray-400 mt-1">Send notification</p>
+                                            <p className="text-xs text-slate-400 mt-1">Send notification</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Stats */}
-                            <div className="mt-8 pt-6 border-t border-orange-500/20 grid grid-cols-3 gap-4 fade-in" style={{ animationDelay: "0.8s" }}>
+                            <div className="mt-8 pt-6 border-t border-slate-700/30 grid grid-cols-3 gap-4 fade-in" style={{ animationDelay: "0.8s" }}>
                                 <div className="text-center">
                                     <p className="text-2xl font-bold gradient-text">4</p>
-                                    <p className="text-xs text-gray-400 mt-1">Nodes</p>
+                                    <p className="text-xs text-slate-400 mt-1">Nodes</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-2xl font-bold gradient-text">2.5s</p>
-                                    <p className="text-xs text-gray-400 mt-1">Exec Time</p>
+                                    <p className="text-xs text-slate-400 mt-1">Exec Time</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-2xl font-bold gradient-text">100%</p>
-                                    <p className="text-xs text-gray-400 mt-1">Success</p>
+                                    <p className="text-xs text-slate-400 mt-1">Success</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Floating Elements */}
-                        <div className="absolute -top-6 -right-6 glass-effect p-4 rounded-xl border border-orange-500/30 float-animation">
-                            <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="absolute -top-6 -right-6 glass-effect p-4 rounded-xl border border-blue-500/30 float-animation">
+                            <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
-                        <div className="absolute -bottom-6 -left-6 glass-effect p-4 rounded-xl border border-orange-500/30 float-animation" style={{ animationDelay: "1s" }}>
-                            <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="absolute -bottom-6 -left-6 glass-effect p-4 rounded-xl border border-slate-600/30 float-animation" style={{ animationDelay: "1s" }}>
+                            <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>

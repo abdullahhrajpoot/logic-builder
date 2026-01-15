@@ -5,28 +5,28 @@ import Footer from "../components/Footer";
 
 export default function PrivacyPolicy() {
     return (
-        <main className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+        <main className="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
             <Navbar />
             <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 md:pt-48 pb-32 space-y-12">
 
                 {/* Header */}
-                <header className="border-b border-white/10 pb-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Privacy Policy</h1>
-                    <div className="flex gap-6 text-sm text-gray-400">
+                <header className="border-b border-slate-800/50 pb-10">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Privacy Policy</h1>
+                    <div className="flex gap-6 text-sm text-slate-400">
                         <p>Effective Date: October 1, 2025</p>
                         <p>Last Updated: October 7, 2025</p>
                     </div>
                 </header>
 
                 {/* Contact Info Top */}
-                <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
-                    <h2 className="text-lg font-semibold text-orange-400 mb-2">Logic Builder LLC</h2>
-                    <p className="text-gray-300">19574 Hollygrape St Oregon, US</p>
-                    <p className="text-gray-300">support@logicbuilder.ai</p>
+                <div className="bg-white/5 p-6 rounded-2xl border border-slate-700/50">
+                    <h2 className="text-lg font-semibold text-blue-400 mb-2">Logic Builder LLC</h2>
+                    <p className="text-slate-300">19574 Hollygrape St Oregon, US</p>
+                    <p className="text-slate-300">support@logicbuilder.ai</p>
                 </div>
 
                 {/* Content */}
-                <div className="prose prose-invert prose-orange max-w-none space-y-12 text-gray-300">
+                <div className="prose prose-invert prose-blue max-w-none space-y-12 text-slate-300">
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">1. INTRODUCTION</h2>
@@ -123,12 +123,12 @@ export default function PrivacyPolicy() {
                             <li>Opt out of marketing communications</li>
                             <li>File a complaint with a data protection authority</li>
                         </ul>
-                        <p className="mt-4">To exercise your rights, please email us at <a href="mailto:support@logicbuilder.ai" className="text-orange-400 hover:text-orange-300">support@logicbuilder.ai</a>. For security, we may request proof of identity before fulfilling certain requests.</p>
+                        <p className="mt-4">To exercise your rights, please email us at <a href="mailto:support@logicbuilder.ai" className="text-blue-400 hover:text-blue-300">support@logicbuilder.ai</a>. For security, we may request proof of identity before fulfilling certain requests.</p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">11. UNSUBSCRIBE & COMMUNICATION CHOICES</h2>
-                        <p>To unsubscribe from our email list, simply click the link at the bottom of our emails or contact us at <a href="mailto:support@logicbuilder.ai" className="text-orange-400 hover:text-orange-300">support@logicbuilder.ai</a> with "unsubscribe" in the subject line. Unsubscribing may take up to 10 business days to process.</p>
+                        <p>To unsubscribe from our email list, simply click the link at the bottom of our emails or contact us at <a href="mailto:support@logicbuilder.ai" className="text-blue-400 hover:text-blue-300">support@logicbuilder.ai</a> with "unsubscribe" in the subject line. Unsubscribing may take up to 10 business days to process.</p>
                     </section>
 
                     <section>
@@ -166,10 +166,10 @@ export default function PrivacyPolicy() {
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">18. CONTACT US</h2>
                         <p>If you have questions, concerns, or requests related to your privacy or data:</p>
-                        <div className="mt-4 bg-white/5 p-6 rounded-xl inline-block border border-white/10">
+                        <div className="mt-4 bg-white/5 p-6 rounded-xl inline-block border border-slate-700/50">
                             <p className="font-semibold text-white">Logic Builder LLC</p>
-                            <p className="text-gray-300">19574 Hollygrape St Oregon, US</p>
-                            <a href="mailto:support@logicbuilder.ai" className="text-orange-400 hover:text-orange-300 block mt-2">support@logicbuilder.ai</a>
+                            <p className="text-slate-300">19574 Hollygrape St Oregon, US</p>
+                            <a href="mailto:support@logicbuilder.ai" className="text-blue-400 hover:text-blue-300 block mt-2">support@logicbuilder.ai</a>
                         </div>
                     </section>
                 </div>
