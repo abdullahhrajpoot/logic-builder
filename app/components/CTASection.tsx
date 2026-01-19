@@ -4,15 +4,15 @@ import Link from "next/link";
 export default function CTASection() {
     return (
         <section className="relative py-32 overflow-hidden">
-            {/* Background Effects */}
+            {/* Background Effects - Blue/Slate tones */}
             <div className="absolute inset-0">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl spotlight"></div>
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl spotlight" style={{ animationDelay: "2s" }}></div>
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl spotlight"></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-slate-500/15 rounded-full blur-3xl spotlight" style={{ animationDelay: "2s" }}></div>
             </div>
             <div className="absolute inset-0 grid-pattern opacity-20"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="glass-effect p-8 md:p-16 rounded-3xl border border-orange-500/30 glow-orange text-center overflow-hidden relative">
+                <div className="glass-effect p-8 md:p-16 rounded-3xl border border-slate-700/40 glow-slate text-center overflow-hidden relative">
                     {/* Animated gradient background */}
                     <div className="absolute inset-0 animated-gradient opacity-10"></div>
 
@@ -20,12 +20,12 @@ export default function CTASection() {
                     <div className="relative z-10">
                         {/* Badge */}
                         <div className="inline-block mb-6 fade-in">
-                            <div className="glass-effect px-6 py-2 rounded-full border border-orange-500/30 inline-flex items-center gap-2">
+                            <div className="glass-effect px-6 py-2 rounded-full border border-blue-500/30 inline-flex items-center gap-2">
                                 <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                                 </span>
-                                <span className="text-sm text-orange-400 font-medium">
+                                <span className="text-sm text-blue-400 font-medium">
                                     Join 50,000+ Users Today
                                 </span>
                             </div>
@@ -39,7 +39,7 @@ export default function CTASection() {
                         </h2>
 
                         {/* Subheading */}
-                        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed fade-in" style={{ animationDelay: "0.4s" }}>
+                        <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed fade-in" style={{ animationDelay: "0.4s" }}>
                             Start automating your processes today. No credit card required.
                             <br />
                             Get started in minutes, not hours.
@@ -47,7 +47,7 @@ export default function CTASection() {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 fade-in" style={{ animationDelay: "0.6s" }}>
-                            <Link href="/contact" className="btn-primary group px-10 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 glow-orange-strong shadow-2xl min-w-[220px] flex items-center justify-center">
+                            <Link href="/contact" className="btn-primary group px-10 py-5 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 glow-slate-strong shadow-2xl min-w-[220px] flex items-center justify-center border border-slate-500/30">
                                 Get Started Free
                                 <svg
                                     className="inline-block ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
@@ -63,7 +63,7 @@ export default function CTASection() {
                                     />
                                 </svg>
                             </Link>
-                            <Link href="/contact" className="group px-10 py-5 glass-effect text-white text-lg font-semibold rounded-xl border border-orange-500/30 hover:border-orange-500 transform hover:scale-105 transition-all duration-300 min-w-[220px] flex items-center justify-center">
+                            <Link href="/contact" className="group px-10 py-5 glass-effect text-white text-lg font-semibold rounded-xl border border-slate-700/50 hover:border-blue-500/50 transform hover:scale-105 transition-all duration-300 min-w-[220px] flex items-center justify-center">
                                 Schedule Demo
                                 <svg
                                     className="inline-block ml-2 w-5 h-5"
@@ -82,7 +82,7 @@ export default function CTASection() {
                         </div>
 
                         {/* Trust Indicators */}
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm text-gray-400 fade-in" style={{ animationDelay: "0.8s" }}>
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm text-slate-400 fade-in" style={{ animationDelay: "0.8s" }}>
                             <div className="flex items-center gap-2">
                                 <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

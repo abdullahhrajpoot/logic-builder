@@ -17,28 +17,28 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-28 md:pt-20">
-            {/* Grid Scan Background */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pt-28 md:pt-20">
+            {/* Grid Scan Background - Updated to blue/slate tones */}
             <div className="absolute inset-0 z-0">
                 <GridScan
                     sensitivity={0.55}
                     lineThickness={1}
-                    linesColor="#2a2a2a"
+                    linesColor="#eb5f0e"
                     gridScale={0.1}
-                    scanColor="#f97316"
-                    scanOpacity={0.4}
+                    scanColor="#eb5f0e"
+                    scanOpacity={0.3}
                     enablePost={true}
-                    bloomIntensity={0.6}
+                    bloomIntensity={0.4}
                     chromaticAberration={0.002}
                     noiseIntensity={0.01}
                     className="w-full h-full"
                 />
             </div>
 
-            {/* Radial Gradient Overlay */}
+            {/* Radial Gradient Overlay - Blue/Slate tones */}
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl spotlight"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl spotlight" style={{ animationDelay: "2s" }}></div>
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-eb5f0e/8 rounded-full blur-3xl spotlight"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-eb5f0e/10 rounded-full blur-3xl spotlight" style={{ animationDelay: "2s" }}></div>
             </div>
 
             {/* Content Container */}
@@ -47,30 +47,17 @@ export default function HeroSection() {
 
                     {/* Left: Text Content */}
                     <div className="pointer-events-auto text-center lg:text-left fade-in">
-                        {/* Badge */}
-                        {/* <div className="mb-8 inline-block">
-                            <div className="glass-effect px-6 py-2 rounded-full border border-orange-500/30 inline-flex items-center gap-2 glow-orange">
-                                <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                                </span>
-                                <span className="text-sm text-gray-300 font-medium">
-                                    AI-Powered Logic Automation
-                                </span>
-                            </div>
-                        </div> */}
-
                         {/* Main Heading */}
                         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                             Build Logic That
                             <br />
-                            <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+                            <span className="gradient-text">
                                 Thinks For You
                             </span>
                         </h1>
 
                         {/* Subheading */}
-                        <p className="text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light tracking-wide">
+                        <p className="text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light tracking-wide">
                             Create powerful automation workflows with drag-and-drop simplicity.
                             <br className="hidden md:block" />
                             <span className="text-white font-medium">No code required</span>, infinite possibilities.
@@ -78,18 +65,18 @@ export default function HeroSection() {
 
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mb-12">
-                            <Link href="/contact" className="btn-primary group relative px-8 py-4 bg-orange-600 text-white text-lg font-bold rounded-xl hover:bg-orange-500 transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(249,115,22,0.6)] hover:shadow-[0_0_40px_rgba(249,115,22,0.8)] min-w-[200px] flex items-center justify-center overflow-hidden border border-orange-400/50">
+                            <Link href="/contact" className="btn-primary group relative px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-bold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(100,116,139,0.4)] hover:shadow-[0_0_40px_rgba(100,116,139,0.6)] min-w-[200px] flex items-center justify-center overflow-hidden border border-slate-500/40">
                                 <span className="relative z-10 flex items-center gap-2">
                                     Start Building
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-white" />
                                 </span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-slate-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </Link>
 
-                            <Link href="/ai-agents" className="group px-8 py-4 glass-effect text-white text-lg font-semibold rounded-xl border border-white/10 hover:border-orange-500/50 hover:bg-orange-500/10 transform hover:scale-105 transition-all duration-300 min-w-[200px] flex items-center justify-center gap-3 backdrop-blur-xl">
+                            <Link href="/ai-agents" className="group px-8 py-4 glass-effect text-white text-lg font-semibold rounded-xl border border-slate-700/50 hover:border-blue-500/50 hover:bg-blue-500/10 transform hover:scale-105 transition-all duration-300 min-w-[200px] flex items-center justify-center gap-3 backdrop-blur-xl">
                                 <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
                                 </span>
                                 Watch Demo
                                 <Play className="w-4 h-4 fill-current" />
@@ -98,13 +85,13 @@ export default function HeroSection() {
 
                         {/* Stats - Compact Grid for Split Layout */}
                         <div className="grid grid-cols-2 gap-6 max-w-lg mx-auto lg:mx-0">
-                            <div className="glass-effect p-4 rounded-xl border border-orange-500/20">
+                            <div className="glass-effect p-4 rounded-xl border border-slate-700/30">
                                 <div className="text-2xl font-bold gradient-text">50K+</div>
-                                <div className="text-xs text-gray-400">Active Users</div>
+                                <div className="text-xs text-slate-400">Active Users</div>
                             </div>
-                            <div className="glass-effect p-4 rounded-xl border border-orange-500/20">
+                            <div className="glass-effect p-4 rounded-xl border border-slate-700/30">
                                 <div className="text-2xl font-bold gradient-text">2M+</div>
-                                <div className="text-xs text-gray-400">Workflows</div>
+                                <div className="text-xs text-slate-400">Workflows</div>
                             </div>
                         </div>
                     </div>
@@ -112,11 +99,11 @@ export default function HeroSection() {
                     {/* Right: Video Content */}
                     <div className="pointer-events-auto relative mt-8 lg:mt-0 fade-in" style={{ animationDelay: "0.2s" }}>
                         <div className="relative group">
-                            {/* Glow Background */}
-                            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                            {/* Glow Background - Blue/Slate */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/40 to-slate-600/40 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
                             {/* Video Frame */}
-                            <div className="relative rounded-2xl overflow-hidden glass-effect border border-white/10 shadow-2xl transform transition-all duration-500 hover:shadow-orange-500/20 group-hover:border-orange-500/30">
+                            <div className="relative rounded-2xl overflow-hidden glass-effect border border-slate-700/30 shadow-2xl transform transition-all duration-500 hover:shadow-blue-500/10 group-hover:border-blue-500/30">
                                 <video
                                     ref={videoRef}
                                     src="/home video/demo.mp4"
@@ -128,12 +115,12 @@ export default function HeroSection() {
                                 />
 
                                 {/* Overlay Tint */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
 
                                 {/* Audio Control */}
                                 <button
                                     onClick={toggleMute}
-                                    className="absolute bottom-4 right-4 p-3 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white hover:bg-orange-500 hover:text-white transition-all duration-300 z-20 group/audio"
+                                    className="absolute bottom-4 right-4 p-3 rounded-full bg-slate-900/60 backdrop-blur-md border border-slate-700/50 text-white hover:bg-blue-600 hover:text-white transition-all duration-300 z-20 group/audio"
                                 >
                                     {isMuted ? (
                                         <VolumeX className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
@@ -144,8 +131,8 @@ export default function HeroSection() {
                             </div>
 
                             {/* Floating UI Elements (Optional Decor) */}
-                            <div className="absolute -top-6 -right-6 w-20 h-20 bg-orange-500/20 rounded-full blur-xl animate-pulse"></div>
-                            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
+                            <div className="absolute -top-6 -right-6 w-20 h-20 bg-blue-500/15 rounded-full blur-xl animate-pulse"></div>
+                            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-slate-500/10 rounded-full blur-2xl"></div>
                         </div>
                     </div>
 
@@ -155,7 +142,7 @@ export default function HeroSection() {
             {/* Scroll Indicator */}
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 pulse-animation pointer-events-auto z-10">
                 <svg
-                    className="w-6 h-6 text-orange-500/50"
+                    className="w-6 h-6 text-slate-500/50"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

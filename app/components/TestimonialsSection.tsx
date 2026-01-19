@@ -29,13 +29,13 @@ export default function TestimonialsSection() {
         <section className="relative py-32 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 grid-pattern opacity-10"></div>
-            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-20">
                     <div className="inline-block mb-4">
-                        <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-orange-400 border border-orange-500/30">
+                        <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-blue-400 border border-blue-500/30">
                             Testimonials
                         </span>
                     </div>
@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
                         <br />
                         <span className="gradient-text">Around the World</span>
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-slate-400 max-w-2xl mx-auto">
                         Join thousands of teams already building smarter with Logic Builder
                     </p>
                 </div>
@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="group glass-effect p-8 rounded-2xl border border-orange-500/20 hover:border-orange-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer fade-in"
+                            className="group glass-effect p-8 rounded-2xl border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer fade-in"
                             style={{
                                 animationDelay: `${index * 0.2}s`,
                                 opacity: 0
@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <svg
                                         key={i}
-                                        className="w-5 h-5 text-orange-500"
+                                        className="w-5 h-5 text-amber-400"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                     >
@@ -75,18 +75,18 @@ export default function TestimonialsSection() {
                             </div>
 
                             {/* Content */}
-                            <p className="text-gray-300 leading-relaxed mb-8 italic">
+                            <p className="text-slate-300 leading-relaxed mb-8 italic">
                                 "{testimonial.content}"
                             </p>
 
                             {/* Author */}
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-lg">
+                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-slate-600 flex items-center justify-center text-white font-bold text-lg">
                                     {testimonial.image}
                                 </div>
                                 <div>
                                     <p className="text-white font-semibold">{testimonial.name}</p>
-                                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                                    <p className="text-slate-400 text-sm">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>
@@ -94,23 +94,23 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Trust Badges */}
-                <div className="mt-20 glass-effect p-8 rounded-2xl border border-orange-500/20">
+                <div className="mt-20 glass-effect p-8 rounded-2xl border border-slate-700/30">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
                         <div className="text-center">
                             <div className="text-3xl font-bold gradient-text mb-2">4.9/5</div>
-                            <div className="text-sm text-gray-400">Average Rating</div>
+                            <div className="text-sm text-slate-400">Average Rating</div>
                         </div>
                         <div className="text-center">
                             <div className="text-3xl font-bold gradient-text mb-2">10K+</div>
-                            <div className="text-sm text-gray-400">Reviews</div>
+                            <div className="text-sm text-slate-400">Reviews</div>
                         </div>
                         <div className="text-center">
                             <div className="text-3xl font-bold gradient-text mb-2">500+</div>
-                            <div className="text-sm text-gray-400">Enterprises</div>
+                            <div className="text-sm text-slate-400">Enterprises</div>
                         </div>
                         <div className="text-center">
                             <div className="text-3xl font-bold gradient-text mb-2">99%</div>
-                            <div className="text-sm text-gray-400">Would Recommend</div>
+                            <div className="text-sm text-slate-400">Would Recommend</div>
                         </div>
                     </div>
                 </div>
