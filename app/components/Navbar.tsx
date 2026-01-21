@@ -85,7 +85,7 @@ export default function Navbar() {
               href="/contact"
               className="btn-primary relative px-5 py-2 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-sm font-semibold rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all duration-300 shadow-lg shadow-slate-900/40 border border-slate-500/30"
             >
-              Get Started
+              Schedule Demo
             </Link>
           </div>
 
@@ -142,7 +142,7 @@ export default function Navbar() {
               className="btn-primary text-center px-5 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transition-all duration-300 shadow-lg shadow-slate-900/40 border border-slate-500/30"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Started
+              Schedule Demo
             </Link>
           </div>
         )}

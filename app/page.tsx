@@ -15,7 +15,6 @@ export default function Home() {
       <HeroSection />
       <LogoLoop />
       <FeaturesSection />
-      <WorkflowShowcase />
       <TestimonialsSection />
       <CTASection />
       <Footer />

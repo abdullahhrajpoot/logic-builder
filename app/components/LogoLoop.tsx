@@ -55,38 +55,38 @@ export default function LogoLoop() {
                 {/* Right Fade */}
                 <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-slate-950 to-transparent z-20 pointer-events-none" />
 
-                <div className="flex shrink-0 items-center gap-20 animate-scroll pl-20 min-w-full">
+                <div className="flex shrink-0 items-center gap-12 animate-scroll pl-12 min-w-full">
                     {logos.concat(logos).map((logo, index) => (
                         <div
                             key={`${logo.name}-${index}`}
-                            className="relative w-40 h-16 flex items-center justify-center group"
+                            className="relative w-48 h-32 flex items-center justify-center group bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10"
                         >
-                            <div className="absolute inset-0 bg-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-4 blur-xl" />
+                            <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             <Image
                                 src={logo.url}
                                 alt={logo.name}
-                                width={160}
-                                height={64}
+                                width={192}
+                                height={128}
                                 unoptimized
-                                className="object-contain w-full h-full filter grayscale opacity-50 contrast-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:contrast-100 transition-all duration-500 transform hover:scale-110"
+                                className="object-contain w-full h-full p-4 transition-transform duration-500 hover:scale-110"
                             />
                         </div>
                     ))}
                 </div>
-                <div className="flex shrink-0 items-center gap-20 animate-scroll pl-20 min-w-full" aria-hidden="true">
+                <div className="flex shrink-0 items-center gap-12 animate-scroll pl-12 min-w-full" aria-hidden="true">
                     {logos.concat(logos).map((logo, index) => (
                         <div
                             key={`${logo.name}-duplicate-${index}`}
-                            className="relative w-40 h-16 flex items-center justify-center group"
+                            className="relative w-48 h-32 flex items-center justify-center group bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10"
                         >
-                            <div className="absolute inset-0 bg-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -m-4 blur-xl" />
+                            <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             <Image
                                 src={logo.url}
                                 alt={logo.name}
-                                width={160}
-                                height={64}
+                                width={192}
+                                height={128}
                                 unoptimized
-                                className="object-contain w-full h-full filter grayscale opacity-50 contrast-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:contrast-100 transition-all duration-500 transform hover:scale-110"
+                                className="object-contain w-full h-full p-4 transition-transform duration-500 hover:scale-110"
                             />
                         </div>
                     ))}

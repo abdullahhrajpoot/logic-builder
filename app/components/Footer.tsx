@@ -64,9 +64,9 @@ export default function Footer() {
                             <span className="text-2xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">Logic Builder</span>
                         </Link>
                         <p className="text-slate-400 leading-relaxed mb-8">
-                            Empowering creators to build intelligent automation workflows.
+                            Empowering businesses with AI & automation solutions.
                             <br />
-                            <span className="text-white font-medium">No code required. Pure logic.</span>
+                            <span className="text-white font-medium">Pure logic. Infinite scale.</span>
                         </p>
 
                         <div className="flex gap-4">

@@ -13,30 +13,13 @@ export default function AboutPage() {
                 {/* Spotlight Effect */}
                 <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="max-w-4xl mx-auto text-center relative z-10 mb-16">
+                <div className="max-w-4xl mx-auto text-center relative z-10 mb-8">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 fade-in">
                         About <span className="gradient-text">Us</span>
                     </h1>
                     <p className="text-xl text-slate-400 fade-in" style={{ animationDelay: "0.2s" }}>
                         Start and grow your business with Logic Builder's <span className="text-blue-400 font-semibold">AI systems</span> built for everyone.
                     </p>
-                </div>
-
-                {/* Hero Image */}
-                <div className="max-w-6xl mx-auto relative fade-in" style={{ animationDelay: "0.4s" }}>
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-slate-500 to-blue-600 rounded-2xl blur opacity-30"></div>
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700/30">
-                        {/* Placeholder matching assumption: Image 1 is Hero */}
-                        <Image
-                            src="/about/tmp8p4w9sf6.webp"
-                            alt="Founders at Logic Builder"
-                            fill
-                            className="object-cover"
-                        />
-
-                        {/* Overlay for cinematic feel */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
-                    </div>
                 </div>
             </section>
 

@@ -2,8 +2,20 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useState, useRef } from "react";
+import { Play } from "lucide-react";
 
 export default function AiAgentsPage() {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handlePlay = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+            setIsPlaying(true);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
             <Navbar />
@@ -32,14 +44,29 @@ export default function AiAgentsPage() {
 
                     <div className="relative h-full w-full bg-slate-950 rounded-3xl overflow-hidden">
                         <video
+                            ref={videoRef}
                             src="/ai agents/demo.mp4"
                             poster="/ai agents/thumbnail.png"
-                            controls
+                            controls={isPlaying}
                             className="w-full h-full object-cover"
                             style={{ boxShadow: '0 0 50px rgba(0,0,0,0.5)' }}
+                            onPlay={() => setIsPlaying(true)}
+                            onPause={() => setIsPlaying(false)}
                         >
                             Your browser does not support the video tag.
                         </video>
+
+                        {/* Custom Play Button Overlay */}
+                        {!isPlaying && (
+                            <div
+                                onClick={handlePlay}
+                                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] cursor-pointer transition-all duration-300 hover:bg-black/20 z-10"
+                            >
+                                <div className="w-24 h-24 bg-orange-600 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(234,88,12,0.5)] transform group-hover:scale-110 transition-all duration-300">
+                                    <Play className="w-10 h-10 text-white fill-white translate-x-1" />
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 

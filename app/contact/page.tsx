@@ -26,66 +26,53 @@ export default function ContactPage() {
 
             {/* Contact Content Section */}
             <section className="pb-20 px-6 lg:px-8 relative fade-in" style={{ animationDelay: "0.4s" }}>
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
-                    {/* Left Column: Contact Info & Visuals */}
-                    <div className="space-y-12 relative">
-                        {/* Decor element */}
-                        <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 blur-[80px] rounded-full pointer-events-none"></div>
+                    {/* Left Column: Book a Demo Form */}
+                    <div className="glass-effect p-8 lg:p-12 rounded-3xl border border-slate-700/30 relative overflow-hidden group h-full flex flex-col">
+                        <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-500/10 to-transparent blur-[60px] pointer-events-none"></div>
 
-                        {/* Info Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                            {/* Email Card */}
-                            <div className="glass-effect p-8 rounded-2xl border border-slate-700/30 hover:border-blue-500/30 transition-colors group">
-                                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                </div>
-                                <h3 className="text-lg font-bold mb-2 text-white">Email Us</h3>
-                                <p className="text-slate-400 text-sm mb-4">For general inquiries and support.</p>
-                                <a href="mailto:support@logicbuilder.ai" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">support@logicbuilder.ai</a>
-                            </div>
+                        <div className="relative z-10 flex flex-col h-full">
+                            <h3 className="text-3xl font-bold mb-2">Book a Demo</h3>
+                            <p className="text-slate-400 mb-8">See our AI agents in action by scheduling a personalized demo.</p>
 
-                            {/* Office Card */}
-                            <div className="glass-effect p-8 rounded-2xl border border-slate-700/30 hover:border-blue-500/30 transition-colors group">
-                                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <form className="space-y-6 flex-1 flex flex-col">
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-300 ml-1">Full Name</label>
+                                    <input type="text" className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-600" placeholder="Jane Smith" />
                                 </div>
-                                <h3 className="text-lg font-bold mb-2 text-white">Visit Us</h3>
-                                <p className="text-slate-400 text-sm mb-4">Talk to us in person.</p>
-                                <span className="text-slate-300 font-medium block">19574 Hollygrape St, <br />Oregon, US</span>
-                            </div>
-                        </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-300 ml-1">Work Email</label>
+                                    <input type="email" className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-600" placeholder="jane@company.com" />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-300 ml-1">Company Name</label>
+                                    <input type="text" className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-600" placeholder="Acme Inc." />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-300 ml-1">Preferred Time</label>
+                                    <select className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all appearance-none cursor-pointer">
+                                        <option>Morning (9AM - 12PM)</option>
+                                        <option>Afternoon (12PM - 4PM)</option>
+                                        <option>Evening (4PM - 6PM)</option>
+                                    </select>
+                                </div>
 
-                        {/* Map / Graphic Placeholder */}
-                        <div className="relative w-full aspect-video rounded-3xl overflow-hidden glass-effect border border-slate-700/30 group">
-                            <div className="absolute inset-0 bg-[url('https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/-122.399,37.781,14,0/800x600?access_token=YOUR_TOKEN')] bg-cover bg-center grayscale opacity-50 group-hover:opacity-75 transition-opacity duration-700"></div>
-                            {/* Note: In a real app we'd use a real map image or component. For now, simulating a dark map theme with a gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="relative">
-                                    <div className="absolute -inset-4 bg-blue-500/50 rounded-full animate-ping"></div>
-                                    <div className="relative w-4 h-4 bg-blue-500 rounded-full border-2 border-white"></div>
-                                </div>
-                            </div>
-                            <div className="absolute bottom-6 left-6 right-6">
-                                <div className="bg-slate-950/80 backdrop-blur-md p-4 rounded-xl border border-slate-700/50 flex items-center gap-4">
-                                    <div className="text-xs text-slate-400">
-                                        <span className="block text-white font-bold text-sm">Logic Builder HQ</span>
-                                        Oregon, US
-                                    </div>
-                                </div>
-                            </div>
+                                <button type="button" className="w-full btn-primary bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 rounded-xl hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-lg glow-blue mt-auto border border-blue-500/30">
+                                    Schedule Demo
+                                </button>
+                            </form>
                         </div>
                     </div>
 
-                    {/* Right Column: Interactive Form */}
-                    <div className="glass-effect p-8 lg:p-12 rounded-3xl border border-slate-700/30 relative overflow-hidden">
+                    {/* Right Column: General Contact Form */}
+                    <div className="glass-effect p-8 lg:p-12 rounded-3xl border border-slate-700/30 relative overflow-hidden h-full flex flex-col">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-transparent blur-[60px] pointer-events-none"></div>
 
                         <h3 className="text-3xl font-bold mb-2">Send us a message</h3>
-                        <p className="text-slate-400 mb-10">We typically respond within 2 hours during business hours.</p>
+                        <p className="text-slate-400 mb-8">For general support, partnerships, or technical inquiries.</p>
 
-                        <form className="space-y-6 relative z-10">
+                        <form className="space-y-6 relative z-10 flex-1 flex flex-col">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-sm font-semibold text-slate-300 ml-1">First Name</label>
@@ -105,7 +92,6 @@ export default function ContactPage() {
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Subject</label>
                                 <select className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all appearance-none cursor-pointer">
-                                    <option>Enterprise Solutions</option>
                                     <option>Technical Support</option>
                                     <option>Partnership Inquiry</option>
                                     <option>Other</option>
@@ -114,10 +100,10 @@ export default function ContactPage() {
 
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Message</label>
-                                <textarea rows={5} className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-600 resize-none" placeholder="Tell us about your project..."></textarea>
+                                <textarea rows={5} className="w-full bg-slate-900/50 border border-slate-700/50 rounded-xl px-4 py-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-600 resize-none" placeholder="How can we help you?"></textarea>
                             </div>
 
-                            <button type="button" className="w-full btn-primary bg-gradient-to-r from-slate-600 to-slate-700 text-white font-bold py-4 rounded-xl hover:from-slate-500 hover:to-slate-600 transition-all duration-300 shadow-lg glow-slate mt-2 border border-slate-500/30">
+                            <button type="button" className="w-full btn-primary bg-gradient-to-r from-slate-600 to-slate-700 text-white font-bold py-4 rounded-xl hover:from-slate-500 hover:to-slate-600 transition-all duration-300 shadow-lg glow-slate mt-auto border border-slate-500/30">
                                 Send Message
                             </button>
                         </form>

@@ -6,13 +6,27 @@ import { Volume2, VolumeX, Play, ArrowRight } from "lucide-react";
 import { GridScan } from "./GridScan";
 
 export default function HeroSection() {
-    const [isMuted, setIsMuted] = useState(true);
+    const [isMuted, setIsMuted] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
-    const toggleMute = () => {
+    const toggleMute = (e: React.MouseEvent) => {
+        e.stopPropagation();
         if (videoRef.current) {
             videoRef.current.muted = !videoRef.current.muted;
             setIsMuted(!isMuted);
+        }
+    };
+
+    const handlePlayPause = () => {
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+                setIsPlaying(false);
+            } else {
+                videoRef.current.play();
+                setIsPlaying(true);
+            }
         }
     };
 
@@ -59,8 +73,7 @@ export default function HeroSection() {
                         {/* Subheading */}
                         <p className="text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light tracking-wide">
                             Create powerful automation workflows with drag-and-drop simplicity.
-                            <br className="hidden md:block" />
-                            <span className="text-white font-medium">No code required</span>, infinite possibilities.
+                            <span className="text-white font-medium"> Infinite possibilities.</span>
                         </p>
 
                         {/* CTA Buttons */}
@@ -84,7 +97,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Stats - Compact Grid for Split Layout */}
-                        <div className="grid grid-cols-2 gap-6 max-w-lg mx-auto lg:mx-0">
+                        {/* <div className="grid grid-cols-2 gap-6 max-w-lg mx-auto lg:mx-0">
                             <div className="glass-effect p-4 rounded-xl border border-slate-700/30">
                                 <div className="text-2xl font-bold gradient-text">50K+</div>
                                 <div className="text-xs text-slate-400">Active Users</div>
@@ -93,12 +106,12 @@ export default function HeroSection() {
                                 <div className="text-2xl font-bold gradient-text">2M+</div>
                                 <div className="text-xs text-slate-400">Workflows</div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right: Video Content */}
                     <div className="pointer-events-auto relative mt-8 lg:mt-0 fade-in" style={{ animationDelay: "0.2s" }}>
-                        <div className="relative group">
+                        <div className="relative group cursor-pointer" onClick={handlePlayPause}>
                             {/* Glow Background - Blue/Slate */}
                             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/40 to-slate-600/40 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
@@ -107,27 +120,39 @@ export default function HeroSection() {
                                 <video
                                     ref={videoRef}
                                     src="/home video/demo.mp4"
-                                    autoPlay
                                     loop
                                     muted={isMuted}
                                     playsInline
                                     className="w-full h-auto object-cover"
                                 />
 
-                                {/* Overlay Tint */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                                {/* Play Button Overlay */}
+                                {!isPlaying && (
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[2px] transition-all duration-300 group-hover:bg-black/20">
+                                        <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(234,88,12,0.5)] transform group-hover:scale-110 transition-all duration-300">
+                                            <Play className="w-8 h-8 text-white fill-white translate-x-1" />
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Overlay Tint (hidden when playing) */}
+                                {!isPlaying && (
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none"></div>
+                                )}
 
                                 {/* Audio Control */}
-                                <button
-                                    onClick={toggleMute}
-                                    className="absolute bottom-4 right-4 p-3 rounded-full bg-slate-900/60 backdrop-blur-md border border-slate-700/50 text-white hover:bg-blue-600 hover:text-white transition-all duration-300 z-20 group/audio"
-                                >
-                                    {isMuted ? (
-                                        <VolumeX className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
-                                    ) : (
-                                        <Volume2 className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
-                                    )}
-                                </button>
+                                {isPlaying && (
+                                    <button
+                                        onClick={toggleMute}
+                                        className="absolute bottom-4 right-4 p-3 rounded-full bg-slate-900/60 backdrop-blur-md border border-slate-700/50 text-white hover:bg-blue-600 hover:text-white transition-all duration-300 z-20 group/audio"
+                                    >
+                                        {isMuted ? (
+                                            <VolumeX className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
+                                        ) : (
+                                            <Volume2 className="w-5 h-5 group-hover/audio:scale-110 transition-transform" />
+                                        )}
+                                    </button>
+                                )}
                             </div>
 
                             {/* Floating UI Elements (Optional Decor) */}

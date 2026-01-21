@@ -6,47 +6,20 @@ export default function FeaturesSection() {
         {
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+            ),
+            title: "Complex Logic Architects",
+            description: "We thrive on complexity. Where others see impossible logic, we see an elegant architecture waiting to be built. We handle infinite nesting and cross-platform dependencies."
+        },
+        {
+            icon: (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
             ),
-            title: "Lightning Fast",
-            description: "Build complex workflows in minutes with our intuitive drag-and-drop interface. No coding required."
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-            ),
-            title: "Enterprise Security",
-            description: "Bank-level encryption and compliance with SOC 2, GDPR, and HIPAA standards."
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                </svg>
-            ),
-            title: "Smart Automation",
-            description: "AI-powered suggestions and auto-optimization to make your workflows even more efficient."
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-            ),
-            title: "Visual Builder",
-            description: "Visualize your entire logic flow with our beautiful, interactive canvas."
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-            ),
-            title: "Real-time Analytics",
-            description: "Track performance, monitor executions, and optimize your workflows with live insights."
+            title: "Rapid Deployment",
+            description: "Time is money. Our specialized team moves fast, deploying robust, production-ready systems in days, not months—without ever sacrificing quality."
         },
         {
             icon: (
@@ -54,13 +27,40 @@ export default function FeaturesSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
             ),
-            title: "Team Collaboration",
-            description: "Work together seamlessly with version control, comments, and shared workspaces."
+            title: "Elite Engineering Team",
+            description: "No learning curves here. Our team comprises senior automation architects and systems engineers with deep industry experience who solve problems others can't."
+        },
+        {
+            icon: (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+            ),
+            title: "Scalable Architecture",
+            description: "We build for growth. Our systems are designed to handle thousands of executions per minute from day one, ensuring your business never hits a ceiling."
+        },
+        {
+            icon: (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+            ),
+            title: "Custom Code & API",
+            description: "We go beyond no-code limits. When standard integrations fail, we write custom middleware and scripts to bridge any gap in your technology stack."
+        },
+        {
+            icon: (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+            ),
+            title: "Reliability Obsessed",
+            description: "We build systems that don't break. Comprehensive error handling, redundancy, and self-healing logic are standard in everything we ship."
         },
     ];
 
     return (
-        <section id="features" className="relative py-32 overflow-hidden">
+        <section id="about" className="relative py-32 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 grid-pattern opacity-10"></div>
             <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl"></div>
@@ -71,17 +71,16 @@ export default function FeaturesSection() {
                 <div className="text-center mb-10">
                     <div className="inline-block mb-4">
                         <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium text-blue-400 border border-blue-500/30">
-                            Features
+                            About Us
                         </span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                        Everything You Need to
+                        Engineered for
                         <br />
-                        <span className="gradient-text">Automate Smarter</span>
+                        <span className="gradient-text">Absolute Excellence</span>
                     </h2>
                     <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                        Powerful features designed to make automation accessible to everyone,
-                        from startups to enterprises.
+                        We are a specialized team of architects and engineers focused on building the most complex, high-performance automation systems for ambitious businesses.
                     </p>
                 </div>
 
@@ -115,7 +114,7 @@ export default function FeaturesSection() {
 
                             {/* Hover Arrow */}
                             <div className="mt-6 flex items-center text-blue-400 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
-                                <span className="text-sm font-medium">Learn more</span>
+                                <span className="text-sm font-medium">Work with us</span>
                                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
@@ -126,8 +125,8 @@ export default function FeaturesSection() {
 
                 {/* Bottom CTA */}
                 <div className="mt-20 text-center">
-                    <Link href="/services" className="btn-primary px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 glow-slate shadow-2xl inline-flex items-center border border-slate-500/30">
-                        Explore All Features
+                    <Link href="/contact" className="btn-primary px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 glow-slate shadow-2xl inline-flex items-center border border-slate-500/30">
+                        Meet The Team
                         <svg className="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

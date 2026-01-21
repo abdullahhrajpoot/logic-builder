@@ -59,202 +59,152 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none"></div>
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="max-w-4xl mx-auto text-center relative z-10">
+                <div className="max-w-5xl mx-auto text-center relative z-10">
                     <h1 className="text-5xl md:text-7xl font-bold mb-8 fade-in">
-                        Our <span className="gradient-text">Services</span>
+                        AI & Automation <span className="gradient-text">Services</span>
                     </h1>
-                    <p className="text-xl text-slate-400 mb-10 leading-relaxed fade-in" style={{ animationDelay: "0.2s" }}>
-                        Automation isn't just about saving time—it's about engineering a smarter future. We provide a bespoke ecosystem of intelligence designed to scale your vision, optimize your logic, and obliterate inefficiency.
+                    <p className="text-xl text-slate-400 mb-6 leading-relaxed fade-in max-w-3xl mx-auto" style={{ animationDelay: "0.2s" }}>
+                        We don't just talk about AI—<span className="text-white font-semibold">we build it for you</span> or <span className="text-blue-400 font-semibold">teach you how</span>.
+                        From AI Dialers and automated outreach to full-stack CRM integrations, we deliver solutions that drive real results.
+                    </p>
+                    <p className="text-lg text-slate-500 mb-10 fade-in" style={{ animationDelay: "0.3s" }}>
+                        Whether you want us to <span className="text-white">implement it for you</span> or <span className="text-white">learn to do it yourself</span>—we've got you covered.
                     </p>
                     <Link href="/contact" className="btn-primary px-8 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white font-semibold rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all duration-300 glow-slate fade-in inline-block border border-slate-500/30" style={{ animationDelay: "0.4s" }}>
-                        Get Started
+                        Schedule Demo
                     </Link>
                 </div>
             </section>
 
-            {/* "What Makes Us Different" Section - Revamped */}
-            <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-950/10 to-slate-950"></div>
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                            Why Choose <span className="gradient-text">Logic Builder?</span>
-                        </h2>
-                        <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                            We don't just build scripts; we engineer intelligence. Experience the calm of automation in a chaotic world.
-                            Our systems breathe logic into your operations, turning manual chaos into orchestrated symphony.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Card 1 */}
-                        <div className="group relative p-8 rounded-3xl bg-white/5 border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden h-[400px] flex flex-col justify-end">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmp79n9d12f.webp" alt="Speed" fill className="object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+            {/* Section 1: For Businesses - Done-For-You */}
+            <section className="py-24 px-6 lg:px-8 relative bg-slate-900 border-y border-slate-800/50">
+                <div className="absolute inset-0 bg-blue-500/5 pointer-events-none"></div>
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 text-blue-400 text-sm font-semibold mb-6 border border-blue-500/20">
+                                For Businesses
+                            </span>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                                Production-Grade <span className="text-blue-400">AI Systems</span>
+                            </h2>
+                            <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+                                <p>
+                                    We build custom AI agents, automation workflows, and production-grade software that run sales, marketing, operations, and customer support without human dependency. From <span className="text-white font-semibold">AI dialing systems</span>, <span className="text-white font-semibold">CRM automation</span>, and <span className="text-white font-semibold">lead qualification engines</span> to custom web apps, internal tools, and high-performance websites, everything we build is engineered for speed, reliability, and scale.
+                                </p>
+                                <p>
+                                    Our capabilities span AI content generation, voice and chat agents, custom integrations, API-driven systems, no-code and low-code automation, backend infrastructure, and end-to-end app development. We don’t sell tools. We build systems that work together, ship fast, and produce measurable results.
+                                </p>
+                                <p className="text-xl font-medium text-white pt-4 border-l-4 border-blue-500 pl-6">
+                                    If it can be automated, systemized, or scaled with AI, we build it.
+                                </p>
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <div className="relative z-10">
-                                <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-md">
-                                    <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">Precision Speed</h3>
-                                <p className="text-slate-400">Deploy workflows 10x faster with our pre-built logic blocks and intelligent auto-completion. Speed without sacrifice.</p>
-                            </div>
-                        </div>
-
-                        {/* Card 2 - Featured */}
-                        <div className="group relative p-8 rounded-3xl bg-gradient-to-br from-blue-600/20 to-slate-950 border border-blue-500/50 hover:border-blue-400 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-2xl shadow-blue-500/10 h-[400px] flex flex-col justify-end">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpt8erqnj1.webp" alt="AI Core" fill className="object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
-                            </div>
-                            <div className="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/30 blur-[80px] rounded-full"></div>
-                            <div className="relative z-10">
-                                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/20 backdrop-blur-md">
-                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">AI Core</h3>
-                                <p className="text-slate-200">Our systems don't just execute; they think. Self-healing workflows that adapt to data anomalies in real-time. True cognitive automation.</p>
+                            <div className="mt-10">
+                                <Link href="/contact" className="btn-primary inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-500 transition-all font-semibold shadow-lg shadow-blue-900/20">
+                                    Build Your System
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                </Link>
                             </div>
                         </div>
 
-                        {/* Card 3 */}
-                        <div className="group relative p-8 rounded-3xl bg-white/5 border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden h-[400px] flex flex-col justify-end">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpzueveik_.webp" alt="Visual Clarity" fill className="object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <div className="relative z-10">
-                                <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-md">
-                                    <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                        {/* Visual / Feature Grid for Business */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">Visual Clarity</h3>
-                                <p className="text-slate-400">Complex logic visualized beautifully. Understand your entire operation at a single glance. No black boxes.</p>
+                                <h3 className="text-lg font-bold text-white mb-2">Voice & Chat Agents</h3>
+                                <p className="text-sm text-slate-400">Intelligent 24/7 customer interaction handling.</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">CRM Automation</h3>
+                                <p className="text-sm text-slate-400">Seamless data flow and lead management.</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Custom Web Apps</h3>
+                                <p className="text-sm text-slate-400">Tailored software solutions for your specific needs.</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">High-Performance</h3>
+                                <p className="text-sm text-slate-400">Engineered for speed, reliability, and scale.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Services Showcase - Creative Bento / Grid Style */}
-            <section className="py-24 px-6 lg:px-8 relative">
+            {/* Section 2: For Education - Operating System */}
+            <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-slate-950 pointer-events-none"></div>
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20">
-                        <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Our Expertise</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mt-2">
-                            A Suite of <span className="gradient-text">Premium Tools</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 auto-rows-[400px]">
-
-                        {/* Featured Service - Large */}
-                        <div className="group lg:col-span-8 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmp79n9d12f.webp" alt="Strategy Builder" fill className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-40" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-                            </div>
-                            <div className="absolute bottom-0 left-0 p-8 md:p-12 z-10 w-full">
-                                <h3 className="text-3xl font-bold text-white mb-4 group-hover:translate-x-2 transition-transform duration-300">Strategy Builder</h3>
-                                <p className="text-slate-300 max-w-xl text-lg mb-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                    Build sophisticated automated strategies to guide your business. Whether you map out your customer journey or optimize internal workflows, our builder gives you the tactical edge.
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse">
+                        {/* Content acts as second visually on desktop for variety */}
+                        <div className="order-1 lg:order-2">
+                            <span className="inline-block py-1 px-3 rounded-full bg-purple-500/10 text-purple-400 text-sm font-semibold mb-6 border border-purple-500/20">
+                                For Education
+                            </span>
+                            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                                An Operating System for <span className="text-purple-400">Learning & Building</span>
+                            </h2>
+                            <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+                                <p>
+                                    Our education platform is a full-scale AI and automation training system built for people who want real, deployable skills. We teach AI fundamentals, automation logic, agent workflows, CRM systems, AI dialers, app building, and real-world implementation, not theory.
                                 </p>
-                                <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                                    <svg className="w-6 h-6 text-white transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                                </div>
+                                <p>
+                                    Members get access to a complete AI toolkit to identify profitable niches, validate opportunities, map system architecture, and deploy solutions fast. We pair training with vetted developers, proven frameworks, templates, playbooks, and step-by-step execution paths so you’re not stuck guessing or learning in isolation.
+                                </p>
+                                <p className="text-xl font-medium text-white pt-4 border-l-4 border-purple-500 pl-6">
+                                    This isn’t a course. It’s an operating system for learning, building, and shipping AI-powered businesses.
+                                </p>
+                            </div>
+                            <div className="mt-10">
+                                <Link href="/contact" className="btn-primary inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white rounded-xl hover:bg-purple-500 transition-all font-semibold shadow-lg shadow-purple-900/20">
+                                    Access the System
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                </Link>
                             </div>
                         </div>
 
-                        {/* Side Service - Tall */}
-                        <div className="group lg:col-span-4 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpaa0b0xtb.webp" alt="Recommendation" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                        {/* Visual / Feature Grid for Education */}
+                        <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Real Implementation</h3>
+                                <p className="text-sm text-slate-400">Deployable skills, not just theory. Build real systems.</p>
                             </div>
-                            <div className="absolute bottom-0 left-0 p-8 z-10">
-                                <h3 className="text-2xl font-bold text-white mb-2">Recommendation Generator</h3>
-                                <p className="text-sm text-slate-300 line-clamp-3 mb-4">The Recommendation Generator analyzes your processes and data to automatically suggest optimizations.</p>
-                                <span className="text-blue-400 text-sm font-semibold group-hover:underline decoration-blue-500/0 hover:decoration-blue-500 transition-all">Explore</span>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">AI Toolkit</h3>
+                                <p className="text-sm text-slate-400">Everything you need to identify and validate opportunities.</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Community</h3>
+                                <p className="text-sm text-slate-400">Vetted developers and a network of builders.</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-colors">
+                                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2">Playbooks</h3>
+                                <p className="text-sm text-slate-400">Proven templates and step-by-step execution paths.</p>
                             </div>
                         </div>
-
-                        {/* Side Service 2 */}
-                        <div className="group lg:col-span-5 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpjq5m15fl.webp" alt="Deal Builder" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                            </div>
-                            <div className="absolute bottom-0 left-0 p-8 z-10">
-                                <h3 className="text-2xl font-bold text-white mb-2">Deal Builder</h3>
-                                <p className="text-sm text-slate-300">Close deals faster with AI-driven insights and tracking.</p>
-                            </div>
-                        </div>
-
-                        {/* Wide Service */}
-                        <div className="group lg:col-span-7 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpkhmr3zz4.webp" alt="Outreach" fill className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" />
-                                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-slate-950/50 to-slate-950"></div>
-                            </div>
-                            <div className="absolute top-1/2 left-8 -translate-y-1/2 z-10 max-w-sm">
-                                <div className="p-3 bg-blue-500/20 backdrop-blur-md rounded-xl inline-block mb-4">
-                                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                                </div>
-                                <h3 className="text-3xl font-bold text-white mb-4">Smart Outreach</h3>
-                                <p className="text-slate-300 mb-6">Scale communication without losing the personal touch. Authenticity at scale.</p>
-                                <button className="text-white border border-white/30 px-6 py-2 rounded-full hover:bg-white hover:text-slate-950 transition-all">See details</button>
-                            </div>
-                        </div>
-
-                        {/* Three Small Cards */}
-                        <div className="group lg:col-span-4 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-purple-500/50 transition-all duration-500 bg-purple-950/20">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmprg_lcuh6.webp" alt="AI Toolkit" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-                            </div>
-                            <div className="p-8 h-full flex flex-col justify-between relative z-10">
-                                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 mb-4 backdrop-blur-md">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">AI Toolkit</h3>
-                                    <p className="text-sm text-slate-400">Complete suite of predictive utilities.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="group lg:col-span-4 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-blue-500/50 transition-all duration-500 bg-blue-950/20">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpt8erqnj1.webp" alt="Talent Hub" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-                            </div>
-                            <div className="p-8 h-full flex flex-col justify-between relative z-10">
-                                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 mb-4 backdrop-blur-md">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Talent Hub</h3>
-                                    <p className="text-sm text-slate-400">Connect with automation experts.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="group lg:col-span-4 relative rounded-3xl overflow-hidden glass-effect border border-slate-700/30 hover:border-green-500/50 transition-all duration-500 bg-green-950/20">
-                            <div className="absolute inset-0">
-                                <Image src="/services/tmpzueveik_.webp" alt="Workflow Library" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-30 group-hover:opacity-50 mix-blend-overlay" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-                            </div>
-                            <div className="p-8 h-full flex flex-col justify-between relative z-10">
-                                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 mb-4 backdrop-blur-md">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-white mb-2">Workflow Library</h3>
-                                    <p className="text-sm text-slate-400">Pre-built, ready to scale.</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>
@@ -301,7 +251,7 @@ export default function ServicesPage() {
                             </div>
 
                             <button className="w-full btn-primary bg-gradient-to-r from-slate-600 to-slate-700 text-white font-bold py-4 rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all duration-300 shadow-lg mt-4">
-                                Get Started Now
+                                Schedule Demo
                             </button>
                         </form>
                     </div>
