@@ -126,7 +126,7 @@ export default function FeaturesSection() {
                 {/* Bottom CTA */}
                 <div className="mt-20 text-center">
                     <Link href="/contact" className="btn-primary px-8 py-4 bg-gradient-to-r from-slate-600 to-slate-700 text-white text-lg font-semibold rounded-xl hover:from-slate-500 hover:to-slate-600 transform hover:scale-105 transition-all duration-300 glow-slate shadow-2xl inline-flex items-center border border-slate-500/30">
-                        Meet The Team
+                        Get in Touch
                         <svg className="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

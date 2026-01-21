@@ -19,7 +19,7 @@ export default function CTASection() {
                     {/* Content */}
                     <div className="relative z-10">
                         {/* Badge */}
-                        <div className="inline-block mb-6 fade-in">
+                        {/* <div className="inline-block mb-6 fade-in">
                             <div className="glass-effect px-6 py-2 rounded-full border border-blue-500/30 inline-flex items-center gap-2">
                                 <span className="relative flex h-2 w-2">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -29,7 +29,7 @@ export default function CTASection() {
                                     Join 50,000+ Users Today
                                 </span>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Heading */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in" style={{ animationDelay: "0.2s" }}>
