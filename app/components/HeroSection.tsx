@@ -71,9 +71,9 @@ export default function HeroSection() {
 
                         {/* Subheading */}
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light tracking-wide">
-                            Create powerful automation workflows with drag-and-drop simplicity.
+                            From AI Dialers and automated outreach to full-stack CRM integrations
                             <br className="hidden md:block" />
-                            <span className="text-white font-medium">No code required</span>, infinite possibilities.
+                            <span className="text-white font-medium">We build it for you</span>, or teach you how
                         </p>
 
                         {/* CTA Buttons */}
