@@ -5,24 +5,24 @@ import Footer from "../components/Footer";
 
 export default function TermsAndConditions() {
     return (
-        <main className="min-h-screen bg-black text-white selection:bg-orange-500 selection:text-white">
+        <main className="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
             <Navbar />
             <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 md:pt-48 pb-32 space-y-12">
 
                 {/* Header */}
-                <header className="border-b border-white/10 pb-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Terms and Conditions</h1>
-                    <div className="flex gap-6 text-sm text-gray-400">
+                <header className="border-b border-slate-800/50 pb-10">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Terms and Conditions</h1>
+                    <div className="flex gap-6 text-sm text-slate-400">
                         <p>Effective Date: August 1, 2025</p>
                     </div>
                 </header>
 
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-slate-300 leading-relaxed">
                     By using the products, software, or services ("Services") offered by Logic Builder LLC ("Logic Builder," "we," or "us"), you ("Client" or "you") agree to the following Terms and Conditions.
                 </p>
 
                 {/* Content */}
-                <div className="prose prose-invert prose-orange max-w-none space-y-12 text-gray-300">
+                <div className="prose prose-invert prose-blue max-w-none space-y-12 text-slate-300">
 
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">1. SERVICES</h2>
@@ -102,10 +102,10 @@ export default function TermsAndConditions() {
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">13. CONTACT</h2>
                         <p>For questions, contact us at:</p>
-                        <div className="mt-4 bg-white/5 p-6 rounded-xl inline-block border border-white/10">
-                            <a href="mailto:support@logicbuilder.ai" className="text-orange-400 hover:text-orange-300 font-semibold mb-1 block">support@logicbuilder.ai</a>
+                        <div className="mt-4 bg-white/5 p-6 rounded-xl inline-block border border-slate-700/50">
+                            <a href="mailto:support@logicbuilder.ai" className="text-blue-400 hover:text-blue-300 font-semibold mb-1 block">support@logicbuilder.ai</a>
                             <p className="font-semibold text-white">Logic Builder LLC</p>
-                            <p className="text-gray-300">19574 Hollygrape St Oregon, US</p>
+                            <p className="text-slate-300">19574 Hollygrape St Oregon, US</p>
                         </div>
                     </section>
                 </div>

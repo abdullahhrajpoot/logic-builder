@@ -34,11 +34,11 @@ export default function Footer() {
     const text = "LOGIC BUILDER";
 
     return (
-        <footer className="relative bg-black border-t border-white/10 pt-24 pb-0 overflow-hidden">
-            {/* Ambient Background Glow */}
+        <footer className="relative bg-slate-950 border-t border-slate-800/50 pt-24 pb-0 overflow-hidden">
+            {/* Ambient Background Glow - Blue/Slate */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-30 pointer-events-none">
-                <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[-10%] right-[20%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
+                <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[-10%] right-[20%] w-[500px] h-[500px] bg-slate-600/10 rounded-full blur-[120px]"></div>
             </div>
 
             <motion.div
@@ -52,7 +52,7 @@ export default function Footer() {
                     {/* Brand Section */}
                     <motion.div variants={itemVariants} className="flex-1 max-w-sm">
                         <Link href="/" className="flex items-center gap-3 mb-6 group">
-                            <div className="relative w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 shadow-lg group-hover:border-orange-500/50 group-hover:shadow-orange-500/20 transition-all duration-300">
+                            <div className="relative w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl border border-slate-700/50 shadow-lg group-hover:border-blue-500/50 group-hover:shadow-blue-500/20 transition-all duration-300">
                                 <Image
                                     src="/images/logo-footer.png"
                                     alt="Logic Builder Logo"
@@ -61,12 +61,12 @@ export default function Footer() {
                                     className="object-contain w-8 h-8"
                                 />
                             </div>
-                            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-orange-500 transition-colors">Logic Builder</span>
+                            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">Logic Builder</span>
                         </Link>
-                        <p className="text-gray-400 leading-relaxed mb-8">
-                            Empowering creators to build intelligent automation workflows.
+                        <p className="text-slate-400 leading-relaxed mb-8">
+                            Empowering businesses with AI & automation solutions.
                             <br />
-                            <span className="text-white font-medium">No code required. Pure logic.</span>
+                            <span className="text-white font-medium">Pure logic. Infinite scale.</span>
                         </p>
 
                         <div className="flex gap-4">
@@ -76,7 +76,7 @@ export default function Footer() {
                                     href={Social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-orange-500 hover:border-orange-500 text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1"
+                                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-slate-700/50 hover:bg-blue-600 hover:border-blue-600 text-slate-400 hover:text-white transition-all duration-300 hover:-translate-y-1"
                                 >
                                     <Social.icon className="w-5 h-5" />
                                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 {['About', 'Contact', 'AI Agents'].map((item) => (
                                     <li key={item}>
-                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-blue-400 transition-colors">
                                             {item}
                                         </Link>
                                     </li>
@@ -103,7 +103,7 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 {['Privacy Policy', 'Terms of Service'].map((item) => (
                                     <li key={item}>
-                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-orange-400 transition-colors">
+                                        <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-blue-400 transition-colors">
                                             {item}
                                         </Link>
                                     </li>
@@ -114,7 +114,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar Details */}
-                <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-white/5 pt-8">
+                <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600 border-t border-slate-800/50 pt-8">
                     <p>© {new Date().getFullYear()} Logic Builder. All rights reserved.</p>
                     <div className="flex gap-6">
                         <span>Made with logic.</span>
@@ -123,7 +123,7 @@ export default function Footer() {
             </motion.div>
 
             {/* Giant Typography Reveal */}
-            <div className="w-full overflow-hidden flex justify-center items-end opacity-20 pointer-events-none select-none bg-gradient-to-t from-black via-transparent to-transparent absolute bottom-0 left-0 right-0">
+            <div className="w-full overflow-hidden flex justify-center items-end opacity-20 pointer-events-none select-none bg-gradient-to-t from-slate-950 via-transparent to-transparent absolute bottom-0 left-0 right-0">
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -142,9 +142,9 @@ export default function Footer() {
                                 delay: i * 0.05,
                                 ease: [0.22, 1, 0.36, 1]
                             }}
-                            className="text-[15vw] md:text-[18vw] leading-[0.8] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/0"
+                            className="text-[15vw] md:text-[18vw] leading-[0.8] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-slate-400 to-slate-400/0"
                             style={{
-                                WebkitTextStroke: '1px rgba(255,255,255,0.1)'
+                                WebkitTextStroke: '1px rgba(148,163,184,0.1)'
                             }}
                         >
                             {char === " " ? "\u00A0" : char}
