@@ -143,19 +143,20 @@ export default function ServicesPage() {
             </section>
 
             {/* Section 2: For Education - Operating System */}
-            <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-slate-950 pointer-events-none"></div>
-                <div className="max-w-7xl mx-auto">
+            <section className="py-24 px-6 lg:px-8 relative overflow-hidden bg-slate-950 border-y border-slate-800">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-500/20 via-slate-950 to-slate-950 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-purple-500/5 mix-blend-overlay pointer-events-none"></div>
+                <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse">
                         {/* Content acts as second visually on desktop for variety */}
                         <div className="order-1 lg:order-2">
-                            <span className="inline-block py-1 px-3 rounded-full bg-purple-500/10 text-purple-400 text-sm font-semibold mb-6 border border-purple-500/20">
+                            <span className="inline-block py-1 px-3 rounded-full bg-purple-500/10 text-purple-300 text-sm font-semibold mb-6 border border-purple-500/20">
                                 For Education
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                                An Operating System for <span className="text-purple-400">Learning & Building</span>
+                                An Operating System for <span className="text-purple-300">Learning & Building</span>
                             </h2>
-                            <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+                            <div className="space-y-6 text-lg text-slate-200 leading-relaxed">
                                 <p>
                                     Our education platform is a full-scale AI and automation training system built for people who want real, deployable skills. We teach AI fundamentals, automation logic, agent workflows, CRM systems, AI dialers, app building, and real-world implementation, not theory.
                                 </p>
