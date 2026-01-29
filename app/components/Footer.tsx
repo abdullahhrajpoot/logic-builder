@@ -101,7 +101,7 @@ export default function Footer() {
                         <div>
                             <h4 className="text-white font-semibold text-lg mb-6">Legal</h4>
                             <ul className="space-y-4">
-                                {['Privacy Policy', 'Terms of Service'].map((item) => (
+                                {['Privacy Policy', 'Terms of-Service'].map((item) => (
                                     <li key={item}>
                                         <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-slate-400 hover:text-blue-400 transition-colors">
                                             {item}
