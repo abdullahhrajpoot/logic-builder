@@ -247,7 +247,7 @@ export default function ServicesPage() {
                             <div className="flex items-start gap-3 mt-4">
                                 <input type="checkbox" id="consent" className="mt-1 w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500" />
                                 <label htmlFor="consent" className="text-xs text-gray-500 leading-relaxed">
-                                    I agree to the <a href="#" className="underline hover:text-blue-500">Terms of Service</a> and allow Logic Builder to contact me.
+                                    I agree to the <a href="/terms-of-service" className="underline hover:text-blue-500">Terms of Service</a> and allow Logic Builder to contact me.
                                 </label>
                             </div>
 
