@@ -1,0 +1,11 @@
+name: Deploy Webhook
+
+on:
+  push:
+
+jobs:
+  trigger-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Deployment Webhook
+        run: curl -X POST https://76.13.99.103:8090/websites/logicbuilder.ai/webhook
