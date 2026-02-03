@@ -54,10 +54,10 @@ export default function ProjectsPage() {
                                     className="absolute inset-0 z-10 cursor-pointer group/overlay"
                                 >
                                     <Image
-                                        src="/thumbnails/partnership.png"
+                                        src="/thumbnails/partnership-v1.png"
                                         alt="Partnership Opportunity"
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover/overlay:scale-105"
+                                        className="object-contain transition-transform duration-700 group-hover/overlay:scale-105"
                                         priority
                                     />
                                     <div className="absolute inset-0 bg-slate-950/20 group-hover/overlay:bg-slate-950/0 transition-colors duration-300"></div>
@@ -106,7 +106,7 @@ export default function ProjectsPage() {
                                         src="/thumbnails/automation-v2.png"
                                         alt="Project Showcase"
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover/overlay:scale-105"
+                                        className="object-contain transition-transform duration-700 group-hover/overlay:scale-105"
                                         priority
                                     />
                                     <div className="absolute inset-0 bg-slate-950/20 group-hover/overlay:bg-slate-950/0 transition-colors duration-300"></div>
