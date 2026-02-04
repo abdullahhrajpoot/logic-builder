@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function ProjectsPage() {
+    const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
     return (
         <div className="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
@@ -39,6 +41,15 @@ export default function ProjectsPage() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-slate-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 animate-gradient"></div>
 
                         <div className="relative h-full w-full bg-slate-950 rounded-3xl overflow-hidden">
+                            {/* Overlay to block Drive Pop-out button */}
+                            <div
+                                className="absolute top-0 right-0 w-24 h-24 z-10 cursor-pointer"
+                                onClick={() => setSelectedVideo("https://drive.google.com/file/d/1UfI2I216EE-H5tBOJlcl975dRumk3wlr/preview")}
+                                role="button"
+                                aria-label="Expand video"
+                                title="Expand video"
+                            ></div>
+
                             {/* Google Drive Video Iframe */}
                             <iframe
                                 src="https://drive.google.com/file/d/1UfI2I216EE-H5tBOJlcl975dRumk3wlr/preview"
@@ -64,6 +75,15 @@ export default function ProjectsPage() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-slate-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 animate-gradient"></div>
 
                         <div className="relative h-full w-full bg-slate-950 rounded-3xl overflow-hidden">
+                            {/* Overlay to block Drive Pop-out button */}
+                            <div
+                                className="absolute top-0 right-0 w-24 h-24 z-10 cursor-pointer"
+                                onClick={() => setSelectedVideo("https://drive.google.com/file/d/11rL4SRBrpDTh5elWGNwokbrICk9qVDGw/preview")}
+                                role="button"
+                                aria-label="Expand video"
+                                title="Expand video"
+                            ></div>
+
                             {/* Google Drive Video Iframe */}
                             <iframe
                                 src="https://drive.google.com/file/d/11rL4SRBrpDTh5elWGNwokbrICk9qVDGw/preview"
@@ -101,6 +121,37 @@ export default function ProjectsPage() {
             </main>
 
             <Footer />
+
+            {/* Video Modal */}
+            {selectedVideo && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+                    onClick={() => setSelectedVideo(null)}
+                >
+                    <div
+                        className="relative w-full max-w-5xl aspect-video bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setSelectedVideo(null)}
+                            className="absolute top-4 right-4 z-20 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors backdrop-blur-md border border-white/10"
+                            aria-label="Close modal"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <iframe
+                            src={selectedVideo}
+                            className="w-full h-full"
+                            allow="autoplay; fullscreen"
+                            allowFullScreen
+                            style={{ border: 'none' }}
+                        ></iframe>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
