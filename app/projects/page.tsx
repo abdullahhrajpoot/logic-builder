@@ -2,16 +2,8 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useState, useRef } from "react";
-import Image from "next/image";
 
 export default function ProjectsPage() {
-    // State for video visibility
-    const [video1Active, setVideo1Active] = useState(false);
-    const [video2Active, setVideo2Active] = useState(false);
-
-    const iframeRef1 = useRef<HTMLIFrameElement>(null);
-    const iframeRef2 = useRef<HTMLIFrameElement>(null);
 
     return (
         <div className="min-h-screen bg-slate-950 text-white selection:bg-blue-500 selection:text-white">
@@ -47,31 +39,8 @@ export default function ProjectsPage() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-slate-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 animate-gradient"></div>
 
                         <div className="relative h-full w-full bg-slate-950 rounded-3xl overflow-hidden">
-                            {/* Thumbnail Overlay */}
-                            {!video1Active && (
-                                <div
-                                    onClick={() => setVideo1Active(true)}
-                                    className="absolute inset-0 z-10 cursor-pointer group/overlay"
-                                >
-                                    <Image
-                                        src="/thumbnails/partnership-v1.png"
-                                        alt="Partnership Opportunity"
-                                        fill
-                                        className="object-contain transition-transform duration-700 group-hover/overlay:scale-105"
-                                        priority
-                                    />
-                                    <div className="absolute inset-0 bg-slate-950/20 group-hover/overlay:bg-slate-950/0 transition-colors duration-300"></div>
-
-                                    {/* Subtle Call to Action */}
-                                    <div className="absolute bottom-8 right-8 bg-black/40 backdrop-blur-md px-6 py-2 rounded-full border border-white/10 opacity-0 group-hover/overlay:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/overlay:translate-y-0">
-                                        <span className="text-white font-medium text-sm tracking-wide">Click to Watch</span>
-                                    </div>
-                                </div>
-                            )}
-
                             {/* Google Drive Video Iframe */}
                             <iframe
-                                ref={iframeRef1}
                                 src="https://drive.google.com/file/d/1UfI2I216EE-H5tBOJlcl975dRumk3wlr/preview"
                                 className="w-full h-full"
                                 allow="autoplay; fullscreen"
@@ -79,7 +48,6 @@ export default function ProjectsPage() {
                                 style={{
                                     border: 'none',
                                     boxShadow: '0 0 50px rgba(0,0,0,0.5)',
-                                    display: video1Active ? 'block' : 'none'
                                 }}
                             ></iframe>
                         </div>
@@ -96,31 +64,8 @@ export default function ProjectsPage() {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-slate-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 animate-gradient"></div>
 
                         <div className="relative h-full w-full bg-slate-950 rounded-3xl overflow-hidden">
-                            {/* Thumbnail Overlay */}
-                            {!video2Active && (
-                                <div
-                                    onClick={() => setVideo2Active(true)}
-                                    className="absolute inset-0 z-10 cursor-pointer group/overlay"
-                                >
-                                    <Image
-                                        src="/thumbnails/partnership-v1.png"
-                                        alt="Project Showcase"
-                                        fill
-                                        className="object-contain transition-transform duration-700 group-hover/overlay:scale-105"
-                                        priority
-                                    />
-                                    <div className="absolute inset-0 bg-slate-950/20 group-hover/overlay:bg-slate-950/0 transition-colors duration-300"></div>
-
-                                    {/* Subtle Call to Action */}
-                                    <div className="absolute bottom-8 right-8 bg-black/40 backdrop-blur-md px-6 py-2 rounded-full border border-white/10 opacity-0 group-hover/overlay:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/overlay:translate-y-0">
-                                        <span className="text-white font-medium text-sm tracking-wide">Click to Watch</span>
-                                    </div>
-                                </div>
-                            )}
-
                             {/* Google Drive Video Iframe */}
                             <iframe
-                                ref={iframeRef2}
                                 src="https://drive.google.com/file/d/11rL4SRBrpDTh5elWGNwokbrICk9qVDGw/preview"
                                 className="w-full h-full"
                                 allow="autoplay; fullscreen"
@@ -128,7 +73,6 @@ export default function ProjectsPage() {
                                 style={{
                                     border: 'none',
                                     boxShadow: '0 0 50px rgba(0,0,0,0.5)',
-                                    display: video2Active ? 'block' : 'none'
                                 }}
                             ></iframe>
                         </div>
